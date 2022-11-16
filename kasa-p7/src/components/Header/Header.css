@@ -1,0 +1,25 @@
+.row {
+   display: flex;
+   justify-content: space-between;
+   padding-bottom: 30px;
+}
+
+.header-top {
+   margin: 40px 100px 40px 100px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   
+}
+
+.header-top-links-group {
+   display: flex;
+   align-items: center;
+   width: 140px;
+   justify-content: space-between;
+}
+
+.header-top-links-group > a {
+   color: #ff6060;
+   text-decoration: none;
+}

@@ -1,0 +1,26 @@
+.swiper {
+   width: 94%;
+   max-width: 1300px;
+   min-width: 550px;
+   height: 400px;
+   font-size: 25px;
+   border-radius: 20px;
+}
+
+.swiper-slide {
+   text-align: center;
+   font-size: 18px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.swiper-slide img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.swiper-button-prev, .swiper-button-next {
+   color: rgb(0, 0, 0);
+}

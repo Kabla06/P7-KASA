@@ -1,0 +1,20 @@
+.container-chelou-ul {
+   margin-top: 43px;
+   display: flex;
+   gap: 45px;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   max-width: 1120px;
+}
+
+.container-background {
+   display: flex;
+   justify-content: center;
+   max-width: 1240px;
+   width: 100%;
+   height: auto;
+   background-color: #f6f6f6;
+   border-radius: 20px;
+   padding-bottom: 40px;
+}

@@ -1,0 +1,25 @@
+.body-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.error-code {
+    padding-top: 40px;
+    padding-bottom: 10px;
+   font-size: 200px;
+   color: #ff6060;
+}
+
+.message-err {
+    padding-bottom: 160px;
+    font-size: 36px;
+    color: #ff6060;
+}
+
+.link-to-home {
+    text-decoration: none;
+    font-size: 18px;
+    color: #ff6060;
+}

@@ -1,0 +1,35 @@
+ul li,
+html {
+   list-style-type: none;
+}
+
+.gros-container {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   padding: 30px;
+}
+
+.title-loc-tags {
+   display: flex;
+   flex-direction: column;
+}
+
+.host-rating-column {
+   display: flex;
+   flex-direction: column;
+}
+
+.host-img-row {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-direction: row;
+   margin-bottom: 10px;
+   width: 150px;
+}
+
+.host-img-row img {
+   width: 50px;
+   border-radius: 50%;
+}
