@@ -6,7 +6,7 @@ import closeSvg from '../../assets/Close.svg'
 import './Dropdown.css'
 
 export default function Dropdown({ title, text }) {
-   const [isExpanded, setExpanded] = useState(false)
+   const [isExpanded, setExpanded] = useState(true)
    const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded })
 
    function handleOnClick() {

@@ -1,13 +1,16 @@
 .collapsible {
-   width: 1000px;
+   width: 100%;
+   max-width: 1000px;
+   min-width: 300px;
    height: auto;
-   padding: 10px;
+   padding: 13px;
 }
 
 .content {
    padding: 15px;
    background-color: #eeeeee;
    border-radius: 10px;
+   overflow: visible;
 }
 
 .header {
@@ -20,13 +23,4 @@
 .header {
    display: flex;
    justify-content: space-between;
-}
-
-.header2 {
-   display: flex;
-   justify-content: space-between;
-   background-color: #ff6060;
-   padding: 10px;
-   cursor: pointer;
-   border-radius: 10px 10px 0 0;
 }

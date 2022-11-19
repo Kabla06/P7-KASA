@@ -39,15 +39,11 @@ export default function Fiche() {
                host={hostName.name}
                hostpic={hostName.picture}
             />
-            {titleDescription.map(({ id, title, description }) => (
-               <ul>
-                  <Dropdown
-                     key={id}
-                     title={title}
-                     text={description}
-                  />
-               </ul>
-            ))}
+            <div className='container-dropdown-fiches'>
+               {titleDescription.map(({ id, title, description }) => (
+                  <Dropdown key={id} title={title} text={description} />
+               ))}
+            </div>
          </div>
          <Footer />
       </div>

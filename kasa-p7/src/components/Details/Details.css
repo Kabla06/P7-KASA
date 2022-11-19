@@ -6,8 +6,10 @@ html {
 .gros-container {
    display: flex;
    justify-content: space-between;
-   width: 100%;
-   padding: 30px;
+   width: 94%;
+   max-width: 1300px;
+   min-width: 550px;
+   margin-top: 20px;
 }
 
 .title-loc-tags {
