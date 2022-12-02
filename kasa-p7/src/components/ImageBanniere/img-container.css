@@ -2,7 +2,7 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   min-width: 550px;
+   min-width: 300px;
    height: auto;
    max-height: 200px;
    margin: 0px 20px 40px 20px;
@@ -14,4 +14,11 @@
    max-height: inherit;
    object-fit: cover;
    border-radius: 20px;
+}
+
+@media screen and (max-width: 490px) {
+   .img-container,
+   .img-img {
+      min-height: 111px;
+   }
 }

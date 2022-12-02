@@ -1,33 +1,23 @@
 import React, { useState } from 'react'
-import useCollapse from 'react-collapsed'
 import openSvg from '../../assets/openClosed.svg'
 import closeSvg from '../../assets/Close.svg'
 
 import './Dropdown.css'
 
-export default function Dropdown({ title, text }) {
-   const [isExpanded, setExpanded] = useState(true)
-   const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded })
+export default function Dropdown(props) {
+   const [isOpen, setIsOpen] = useState(false)
 
-   function handleOnClick() {
-      setExpanded((isExpanded) => !isExpanded)
-   }
-
-   return (
+   return isOpen ? (
       <div className='collapsible'>
-         <div
-            className='header'
-            {...getToggleProps({ onClick: handleOnClick })}
-         >
-            {title}
-            {isExpanded ? (
-               <img src={closeSvg} alt='' />
-            ) : (
-               <img src={openSvg} alt='' />
-            )}
+         <div onClick={() => setIsOpen(false)} className='header'>
+            {props.title} <img src={openSvg} alt='flèche pour fermer'></img>
          </div>
-         <div {...getCollapseProps()}>
-            <div className='content'>{text}</div>
+         <div className='content'>{props.children}</div>
+      </div>
+   ) : (
+      <div className='collapsible'>
+         <div onClick={() => setIsOpen(true)} className='header'>
+            {props.title} <img src={closeSvg} alt='flèche pour fermer'></img>
          </div>
       </div>
    )

@@ -6,20 +6,24 @@ html {
 .gros-container {
    display: flex;
    justify-content: space-between;
-   width: 94%;
    max-width: 1300px;
-   min-width: 550px;
-   margin-top: 20px;
+   width: 100%;
+   padding: 13px;
+   transition: ease-in all .4s;
 }
 
 .title-loc-tags {
    display: flex;
    flex-direction: column;
+   color: #ff6060;
 }
 
 .host-rating-column {
    display: flex;
    flex-direction: column;
+   color: #ff6060;
+   height: fit-content;
+   transition: ease-in all .4s;
 }
 
 .host-img-row {
@@ -34,4 +38,16 @@ html {
 .host-img-row img {
    width: 50px;
    border-radius: 50%;
+}
+
+@media screen and (max-width: 730px) {
+   .gros-container {
+      display: flex;
+      flex-direction: column;
+   }
+   .host-rating-column {
+      margin-top: 20px;
+      flex-direction: row;
+      justify-content: space-between;
+   }
 }

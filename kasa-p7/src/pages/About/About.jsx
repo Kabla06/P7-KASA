@@ -35,7 +35,9 @@ export default function About() {
          <ImageBanniere />
          <div className='content-container'>
             {description.map(({ id, title, text }) => (
-               <Dropdown key={id} title={title} text={text} />
+               <Dropdown key={id} title={title}>
+                  <p>{text}</p>
+               </Dropdown>
             ))}
          </div>
          <Footer />

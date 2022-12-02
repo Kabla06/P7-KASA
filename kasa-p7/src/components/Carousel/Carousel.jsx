@@ -1,33 +1,43 @@
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation } from 'swiper'
-
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
 import './Carousel.css'
+import forward from '../../assets/forward24px.svg'
+import backward from '../../assets/backward24px.svg'
+
+import React, { useState } from 'react'
 
 export default function Carousel({ pictures }) {
-   let value = Math.floor(Math.random() * 999)
-
+   // let currentIndex = 0
+   const [sliderData, setSliderData] = useState(pictures[0])
+   const [indexData, setIndexData] = useState(0)
+   const previous = () => {
+      // si premiere img alors
+      if (indexData === 0) {
+         // on passe a la derniere (length -1 pour aller au bon index)
+         setIndexData(pictures.length - 1)
+      } else {
+         setIndexData(indexData - 1)
+      }
+      setSliderData(pictures[indexData])
+   }
+   const next = () => {
+      if (indexData === pictures.length - 1) {
+         // on passe a la derniere (length -1 pour aller au bon index)
+         setIndexData(0)
+      } else {
+         setIndexData(indexData + 1)
+      }
+      setSliderData(pictures[indexData])
+   }
    return (
-      <>
-         <Swiper
-            slidesPerView={1}
-            spaceBetween={0}
-            loop={true}
-            pagination={{
-               clickable: true,
-            }}
-            navigation={true}
-            modules={[Pagination, Navigation]}
-            className='mySwiper'
-         >
-            {pictures.map((p) => (
-               <SwiperSlide key={(value += 1)}>
-                  <img src={p} alt='' />
-               </SwiperSlide>
-            ))}
-         </Swiper>
-      </>
+      <div className='swipe-picture-container'>
+         <div>
+            <img className='swipe-pictures' src={sliderData} alt='' />
+         </div>
+         <button onClick={previous} className='backward'>
+            <img src={backward} alt='' />
+         </button>
+         <button onClick={next} className='forward'>
+            <img src={forward} alt='' />
+         </button>
+      </div>
    )
 }

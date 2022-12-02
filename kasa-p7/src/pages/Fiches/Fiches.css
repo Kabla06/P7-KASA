@@ -6,4 +6,12 @@
    height: auto;
    margin-top: 20px;
    padding-bottom: 20px;
+   transition: ease-in all .2s;
+}
+
+@media screen and (max-width: 620px) {
+   .container-dropdown-fiches {
+      display: grid;
+      grid-template-columns: 1fr;
+   }
 }

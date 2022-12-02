@@ -1,26 +1,53 @@
-.swiper {
-   width: 94%;
-   max-width: 1300px;
-   min-width: 550px;
-   height: 400px;
-   font-size: 25px;
-   border-radius: 20px;
-}
-
-.swiper-slide {
-   text-align: center;
-   font-size: 18px;
+.swipe-picture-container {
    display: flex;
-   justify-content: center;
+   flex-direction: row;
    align-items: center;
-}
 
-.swiper-slide img {
+   position: relative;
+
+   max-width: 1000px;
+   max-height: 415px;
    width: 100%;
    height: 100%;
+   overflow: hidden;
+   border-radius: 20px;
+   margin-bottom: 30px;
+
+   flex: 1 0 100%;
+
+   scrollbar-width: none;
+   -ms-overflow-style: none;
+}
+
+.swipe-picture-container::-webkit-scrollbar {
+   width: 0;
+   height: 0;
+}
+
+.swipe-pictures {
+   width: inherit;
+   border-radius: 20px;
+   display: flex;
    object-fit: cover;
 }
 
-.swiper-button-prev, .swiper-button-next {
-   color: rgb(0, 0, 0);
+.backward,
+.forward {
+   position: absolute;
+   background-color: transparent;
+   padding: 10px;
+   cursor: pointer;
+}
+
+.backward img,
+.forward img {
+   filter: brightness(0);
+}
+
+.backward {
+   left: 0;
+}
+
+.forward {
+   right: 0;
 }

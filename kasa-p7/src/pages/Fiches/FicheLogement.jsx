@@ -1,6 +1,6 @@
 import './Fiches.css'
 
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
@@ -8,9 +8,12 @@ import Carousel from '../../components/Carousel/Carousel'
 import Details from '../../components/Details/Details'
 import logements from '../../datas/logements.json'
 import Dropdown from '../../components/Dropdown/Dropdown'
+import { useEffect } from 'react'
 
 export default function Fiche() {
+   const navigate = useNavigate()
    const params = useParams()
+   console.log(params)
    let monLogement = logements.filter((l) => l.id === params.id)[0]
 
    const titleDescription = [
@@ -26,7 +29,15 @@ export default function Fiche() {
       },
    ]
 
+   let testCool = titleDescription[1].description
+   // console.log(titleDescription[1].description)
    let hostName = monLogement.host
+
+   useEffect(() => {
+      if (logements.id !== params) {
+         navigate('/about-us')
+      }
+   })
 
    return (
       <div>
@@ -40,9 +51,10 @@ export default function Fiche() {
                hostpic={hostName.picture}
             />
             <div className='container-dropdown-fiches'>
-               {titleDescription.map(({ id, title, description }) => (
-                  <Dropdown key={id} title={title} text={description} />
-               ))}
+               <Dropdown title='Description'>
+                  {titleDescription[0].description}
+               </Dropdown>
+               <Dropdown title='Equipement'>{testCool}</Dropdown>
             </div>
          </div>
          <Footer />

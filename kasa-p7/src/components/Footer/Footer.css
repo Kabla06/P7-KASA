@@ -22,3 +22,9 @@
 .footer-logo-div {
    padding-bottom: 20px;
 }
+
+@media screen and (max-width: 490px) {
+   .footer-text {
+      font-size: 13px;
+   }
+}

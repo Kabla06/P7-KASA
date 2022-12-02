@@ -1,3 +1,18 @@
 .block-tags {
-    margin-top: 20px;
+   padding-top: 30px;
+   color: white;
+   display: flex;
+}
+
+.block-tags > * {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   max-width: 160px;
+   width: 100%;
+   height: auto;
+   padding: 6px;
+   background-color: #ff6060;
+   margin-right: 15px;
+   border-radius: 10px;
 }

@@ -1,0 +1,8 @@
+.container-stars {
+   display: flex;
+   justify-content: space-between;
+}
+
+.star {
+   width: 25px;
+}
