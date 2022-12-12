@@ -17,10 +17,11 @@
 
 .footer-logo-div {
    filter: brightness(10);
+   padding-bottom: 20px;
 }
 
-.footer-logo-div {
-   padding-bottom: 20px;
+.footer-logo-div > img {
+   width: 150px;
 }
 
 @media screen and (max-width: 490px) {

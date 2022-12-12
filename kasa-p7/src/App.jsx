@@ -8,7 +8,7 @@ import React from 'react'
 
 export default function App() {
    return (
-      <div>
+      <>
          <React.StrictMode>
             <Header />
             <ImageBanniere />
@@ -17,6 +17,6 @@ export default function App() {
             </div>
             <Footer />
          </React.StrictMode>
-      </div>
+      </>
    )
 }

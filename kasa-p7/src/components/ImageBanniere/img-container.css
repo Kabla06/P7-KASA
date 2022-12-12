@@ -2,14 +2,14 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   min-width: 300px;
+   min-width: 340px;
    height: auto;
    max-height: 200px;
-   margin: 0px 20px 40px 20px;
+   margin: 0px 10px 40px 10px;
 }
 
 .img-img {
-   width: 1240px;
+   width: 1300px;
    min-width: inherit;
    max-height: inherit;
    object-fit: cover;

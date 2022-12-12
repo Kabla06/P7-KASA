@@ -1,12 +1,12 @@
 .body-container {
-    min-width: 400px;
+   min-width: 300px;
    display: flex;
    align-items: center;
    flex-direction: column;
 }
 
 .body-container h1 {
-    min-width: 20px;
+   min-width: 20px;
 }
 
 .error-code {
@@ -14,11 +14,11 @@
    padding-bottom: 10px;
    font-size: 200px;
    color: #ff6060;
-   transition: ease-in all .2s;
+   transition: ease-in all 0.2s;
 }
 
 .message-err {
-    text-align: center;
+   text-align: center;
    padding-bottom: 160px;
    font-size: 36px;
    color: #ff6060;
@@ -31,12 +31,12 @@
 }
 
 @media screen and (max-width: 460px) {
-    .error-code {
-        font-size: 150px;
-    }
+   .error-code {
+      font-size: 150px;
+   }
 }
 @media screen and (max-width: 400px) {
-    .error-code {
-        font-size: 120px;
-    }
+   .error-code {
+      font-size: 120px;
+   }
 }

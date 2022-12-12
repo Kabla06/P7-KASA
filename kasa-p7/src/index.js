@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client'
 
 import App from './App.jsx'
 import About from './pages/About/About.jsx'
-import Error from './components/Error/Error.jsx'
+import Error from './pages/Error/Error.jsx'
 import Fiche from './pages/Fiches/FicheLogement.jsx'
 
 import {
@@ -22,7 +22,6 @@ import {
    useParams,
 } from 'react-router-dom'
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
    <React.StrictMode>
@@ -31,7 +30,6 @@ root.render(
             <Route path='/' element={<App />} />
             <Route path='/about-us' element={<About />} />
             <Route path='/fiche-logement/:id' element={<Fiche />} />
-            {/* <Route path='/fiche-logement/*' element={<Error />} /> */}
             <Route path='/*' element={<Error />} />
          </Routes>
       </BrowserRouter>

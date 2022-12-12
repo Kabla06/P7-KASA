@@ -1,5 +1,4 @@
 .container-chelou-ul {
-   margin-top: 43px;
    display: flex;
    gap: 45px;
    flex-direction: row;
@@ -11,10 +10,12 @@
 .container-background {
    display: flex;
    justify-content: center;
+   min-width: 340px;
    max-width: 1240px;
    width: 100%;
    height: auto;
    background-color: #f6f6f6;
    border-radius: 20px;
    padding-bottom: 40px;
+   padding: 43px 20px 43px 20px;
 }

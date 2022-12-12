@@ -8,8 +8,8 @@ html {
    justify-content: space-between;
    max-width: 1300px;
    width: 100%;
-   padding: 13px;
-   transition: ease-in all .4s;
+   padding: 13px 0 0 0;
+   transition: ease-in all 0.4s;
 }
 
 .title-loc-tags {
@@ -23,7 +23,7 @@ html {
    flex-direction: column;
    color: #ff6060;
    height: fit-content;
-   transition: ease-in all .4s;
+   transition: ease-in all 0.4s;
 }
 
 .host-img-row {

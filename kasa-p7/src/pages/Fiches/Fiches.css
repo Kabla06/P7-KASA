@@ -1,12 +1,13 @@
 .container-dropdown-fiches {
    display: grid;
    grid-template-columns: 2fr 2fr;
+
+   gap: 20px;
    width: 100%;
    max-width: 1300px;
    height: auto;
-   margin-top: 20px;
    padding-bottom: 20px;
-   transition: ease-in all .2s;
+   transition: ease-in all 0.2s;
 }
 
 @media screen and (max-width: 620px) {

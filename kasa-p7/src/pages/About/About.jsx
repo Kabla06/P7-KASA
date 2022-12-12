@@ -30,7 +30,7 @@ export default function About() {
    ]
 
    return (
-      <div>
+      <>
          <Header />
          <ImageBanniere />
          <div className='content-container'>
@@ -41,6 +41,6 @@ export default function About() {
             ))}
          </div>
          <Footer />
-      </div>
+      </>
    )
 }

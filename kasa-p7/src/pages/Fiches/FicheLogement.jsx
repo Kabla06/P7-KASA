@@ -1,6 +1,6 @@
 import './Fiches.css'
 
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
@@ -8,13 +8,16 @@ import Carousel from '../../components/Carousel/Carousel'
 import Details from '../../components/Details/Details'
 import logements from '../../datas/logements.json'
 import Dropdown from '../../components/Dropdown/Dropdown'
-import { useEffect } from 'react'
 
 export default function Fiche() {
-   const navigate = useNavigate()
    const params = useParams()
-   console.log(params)
+
    let monLogement = logements.filter((l) => l.id === params.id)[0]
+
+
+   if (monLogement === undefined) {
+      return <Navigate to='/404' />
+   }
 
    const titleDescription = [
       {
@@ -29,18 +32,12 @@ export default function Fiche() {
       },
    ]
 
-   let testCool = titleDescription[1].description
-   // console.log(titleDescription[1].description)
+   let equipments = titleDescription[1].description
+   let description = titleDescription[0].description
    let hostName = monLogement.host
 
-   useEffect(() => {
-      if (logements.id !== params) {
-         navigate('/about-us')
-      }
-   })
-
    return (
-      <div>
+      <>
          <Header />
          <div className='content-container'>
             <Carousel pictures={monLogement.pictures} />
@@ -51,13 +48,35 @@ export default function Fiche() {
                hostpic={hostName.picture}
             />
             <div className='container-dropdown-fiches'>
-               <Dropdown title='Description'>
-                  {titleDescription[0].description}
+               {/* dans mon composant Dropdown, j'utilise props.children
+               qui me permet ici de customiser le composant en l'ouvrant directement et en mettant du jsx
+               à l'intérieur.
+               On utilise pas children={} / children="", mais on ouvre le composant pour le customiser
+               comme on veut */}
+               {/* Par exemple, dans mon deuxième dropdown, mon <ul> </ul> est passé en tant qu'enfant
+               de cette itération (dans le className 'content' en l'occurence) */}
+               {/* ça permet de cloner des composants et de les rendre uniques */}
+               <Dropdown title='Description'>{description}</Dropdown>
+               <Dropdown title='Equipement'>
+                  <ul>
+                     {/* Ici, return implicite car paranthèses après =>. */}
+                     {/* Si on remplace par dess accolades ça donne : */}
+
+                     {/* {equipments.map((el) => {
+                        return <li>{el}</li>
+                     })} */}
+
+                     {/* pour la clé unique comment faire
+                     sachant qu'on ne peut pas importer un générateur
+                     de clé et que l'index n'est pas conseillé ?*/}
+                     {equipments.map((el, index) => (
+                        <li key={index}>{el}</li>
+                     ))}
+                  </ul>
                </Dropdown>
-               <Dropdown title='Equipement'>{testCool}</Dropdown>
             </div>
          </div>
          <Footer />
-      </div>
+      </>
    )
 }
