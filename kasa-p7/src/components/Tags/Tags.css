@@ -2,17 +2,22 @@
    padding-top: 30px;
    color: white;
    display: flex;
+   gap: 10px;
 }
 
 .block-tags > * {
    display: flex;
+   flex-wrap: nowrap;
    justify-content: center;
    align-items: center;
-   max-width: 160px;
-   width: 100%;
-   height: auto;
+   min-width: 180px;
    padding: 6px;
    background-color: #ff6060;
-   margin-right: 15px;
    border-radius: 10px;
+}
+
+@media screen and (max-width: 935px) {
+   .block-tags {
+      flex-wrap: wrap;
+   }
 }

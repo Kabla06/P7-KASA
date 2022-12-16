@@ -14,7 +14,6 @@ export default function Fiche() {
 
    let monLogement = logements.filter((l) => l.id === params.id)[0]
 
-
    if (monLogement === undefined) {
       return <Navigate to='/404' />
    }
@@ -48,27 +47,15 @@ export default function Fiche() {
                hostpic={hostName.picture}
             />
             <div className='container-dropdown-fiches'>
-               {/* dans mon composant Dropdown, j'utilise props.children
-               qui me permet ici de customiser le composant en l'ouvrant directement et en mettant du jsx
-               à l'intérieur.
-               On utilise pas children={} / children="", mais on ouvre le composant pour le customiser
-               comme on veut */}
-               {/* Par exemple, dans mon deuxième dropdown, mon <ul> </ul> est passé en tant qu'enfant
-               de cette itération (dans le className 'content' en l'occurence) */}
-               {/* ça permet de cloner des composants et de les rendre uniques */}
                <Dropdown title='Description'>{description}</Dropdown>
                <Dropdown title='Equipement'>
                   <ul>
                      {/* Ici, return implicite car paranthèses après =>. */}
-                     {/* Si on remplace par dess accolades ça donne : */}
+                     {/* Si on remplace par des accolades ça donne : */}
 
                      {/* {equipments.map((el) => {
                         return <li>{el}</li>
                      })} */}
-
-                     {/* pour la clé unique comment faire
-                     sachant qu'on ne peut pas importer un générateur
-                     de clé et que l'index n'est pas conseillé ?*/}
                      {equipments.map((el, index) => (
                         <li key={index}>{el}</li>
                      ))}

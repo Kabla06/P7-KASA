@@ -8,19 +8,7 @@ import About from './pages/About/About.jsx'
 import Error from './pages/Error/Error.jsx'
 import Fiche from './pages/Fiches/FicheLogement.jsx'
 
-import {
-   BrowserRouter,
-   // eslint-disable-next-line no-unused-vars
-   BrowserRouter as Router,
-   Route,
-   Routes,
-   // eslint-disable-next-line no-unused-vars
-   Navigate,
-   // eslint-disable-next-line no-unused-vars
-   useNavigate,
-   // eslint-disable-next-line no-unused-vars
-   useParams,
-} from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

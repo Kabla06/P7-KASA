@@ -8,7 +8,9 @@ export default function Header() {
    return (
       <div className='header-top'>
          <div className='row'>
-            <img className='logo' src={logo} alt='logo' />
+            <Link to='/'>
+               <img className='logo' src={logo} alt='logo' />
+            </Link>
             <nav className='header-top-links-group'>
                <Link to='/'>Accueil</Link>
                <Link to='/about-us'>A Propos</Link>

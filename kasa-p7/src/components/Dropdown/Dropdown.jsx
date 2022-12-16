@@ -8,12 +8,12 @@ export default function Dropdown(props) {
    //isOpen est ce qu'on va return(), setIsOpen est la modification de isOpen
    //useState se modifie avec la deuxième valeur
    //isOpen = première valeur = conditionel
-   const [isOpen, setIsOpen] = useState(true)
+   const [isOpen, setIsOpen] = useState(false)
 
-      return (
+   return (
       <div className='collapsible'>
          <div onClick={() => setIsOpen(!isOpen)} className='header'>
-            {props.title}{' '}
+            {props.title}
             <img
                src={isOpen ? closeSvg : openSvg}
                alt='flèche pour fermer'

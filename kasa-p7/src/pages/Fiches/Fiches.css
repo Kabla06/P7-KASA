@@ -10,9 +10,10 @@
    transition: ease-in all 0.2s;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 660px) {
    .container-dropdown-fiches {
       display: grid;
       grid-template-columns: 1fr;
+      gap: 60px;
    }
 }

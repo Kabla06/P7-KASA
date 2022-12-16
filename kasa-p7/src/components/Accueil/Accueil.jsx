@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 export default function Accueil() {
    return (
       <div className='container-background'>
-         <ul className='container-chelou-ul'>
+         <ul className='container-ul'>
             {logements.map(({ id, title, cover }) => (
                <Link to={`/fiche-logement/${id}`} key={id}>
                   <Card cover={cover} title={title} />
