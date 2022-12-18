@@ -66,6 +66,15 @@
       -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255); */
 }
 
+@media screen and (max-height: 400px) {
+   .swipe-picture-container {
+      max-height: 335px;
+   }
+   .swipe-pictures {
+      height: 335px;
+   }
+}
+
 @media screen and (max-width: 490px) {
    .swipe-picture-container {
       min-height: 320px;
