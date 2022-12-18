@@ -6,6 +6,17 @@
    height: auto;
    max-height: 200px;
    margin: 0px 10px 40px 10px;
+
+   position: relative;
+}
+
+.text-bann {
+   padding: 40px 30px 40px 30px;
+   font-size: 45px;
+   color: rgb(255, 255, 255);
+   position: absolute;
+
+   transition: all 0.4s ease;
 }
 
 .img-img {
@@ -14,6 +25,12 @@
    max-height: inherit;
    object-fit: cover;
    border-radius: 20px;
+}
+
+@media screen and (max-width: 680px) {
+   .text-bann {
+      font-size: 30px;
+   }
 }
 
 @media screen and (max-width: 490px) {

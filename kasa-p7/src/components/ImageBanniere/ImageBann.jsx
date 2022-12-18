@@ -16,6 +16,7 @@ export default function ImageBanniere() {
 
    return (
       <div className='img-container'>
+         <h2 className='text-bann'>Chez vous, partout et ailleurs</h2>
          <img className='img-img' src={img} alt='Bannière' />
       </div>
    )
